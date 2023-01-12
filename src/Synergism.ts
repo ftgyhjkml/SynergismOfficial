@@ -49,6 +49,7 @@ import { octeractData, OcteractUpgrade } from './Octeracts';
 import {settingAnnotation, toggleTheme } from './Themes';
 import { setInterval, setTimeout, clearTimeout, clearTimers } from './Timers';
 import { SingularityChallenge, singularityChallengeData } from './SingularityChallenges';
+import { BlueberryUpgrade, blueberryUpgradeData } from './Blueberries';
 
 export const player: Player = {
     firstPlayed: new Date().toISOString(),
@@ -824,7 +825,16 @@ export const player: Player = {
         oneChallengeCap: new SingularityChallenge(singularityChallengeData['oneChallengeCap']),
         noOcteracts: new SingularityChallenge(singularityChallengeData['noOcteracts']),
         limitedAscensions: new SingularityChallenge(singularityChallengeData['limitedAscensions'])
-    }
+    },
+
+    blueberryUpgrades: {
+        ambrosiaTutorial: new BlueberryUpgrade(blueberryUpgradeData['ambrosiaTutorial']),
+        ambrosiaCubes: new BlueberryUpgrade(blueberryUpgradeData['ambrosiaCubes']),
+        ambrosiaQuarks: new BlueberryUpgrade(blueberryUpgradeData['ambrosiaQuarks']),
+        ambrosiaObtainium: new BlueberryUpgrade(blueberryUpgradeData['ambrosiaObtainium'])
+    },
+
+    ambrosia: 0
 }
 
 export const blankSave = Object.assign({}, player, {

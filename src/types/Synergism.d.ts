@@ -1,4 +1,5 @@
 import type Decimal from 'break_infinity.js';
+import { blueberryUpgradeData, blueberryUpgradeNames } from '../Blueberries';
 import type { WowCubes, WowHypercubes, WowPlatonicCubes, WowTesseracts } from '../CubeExperimental';
 import { HepteractCraft } from '../Hepteracts';
 import { Category, ResetHistoryEntryUnion } from '../History';
@@ -596,7 +597,9 @@ export interface Player {
 
     insideSingularityChallenge: boolean
     singularityChallenges: Record<keyof typeof singularityChallengeData, SingularityChallenge>
+    blueberryUpgrades: Record<blueberryUpgradeNames, BlueberryUpgrade>
 
+    ambrosia: number
 
 }
 
